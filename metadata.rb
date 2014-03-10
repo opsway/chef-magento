@@ -4,7 +4,7 @@ maintainer_email 'samilyak@gmail.com'
 license          'All rights reserved'
 description      'Installs/Configures PHP for Magento'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          '0.1.0'
+version          '0.5.0'
 
 depends "php"
 depends "n98-magerun"
