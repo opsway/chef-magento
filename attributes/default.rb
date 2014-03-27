@@ -18,3 +18,6 @@ default['magento']['supportuser'] = {
 }
 
 default['php']['install_apache2_module_config'] = true
+default['php']['session_gc_maxlifetime'] = '1440'
+default['php']['session_cookie_lifetime'] = '0'
+
