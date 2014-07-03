@@ -48,3 +48,5 @@ file cron_filepath do
   only_if do File.exists?(cron_filepath) end
   mode "755"
 end
+
+include_recipe "n98-magerun::modules"

@@ -9,6 +9,11 @@ end
 package "php5-suhosin" do
 	action :purge
 end
+#
+#We need git for deployments
+package "git-core" do
+  action :install
+end
 
 package 'libapache2-mod-php5'
 
@@ -30,3 +35,4 @@ if node['php']['install_apache2_module_config']
   end
 end
 
+include_recipe "n98-magerun::modules"
