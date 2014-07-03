@@ -12,11 +12,6 @@ end
 
 package 'libapache2-mod-php5'
 
-#We need git for deployments
-package "git-core" do
-  action :install
-end
-
 if node['php']['install_apache2_module_config']
   directory "/etc/php5/apache2" do
     owner "root"
@@ -35,10 +30,3 @@ if node['php']['install_apache2_module_config']
   end
 end
 
-# Install Magento cron
-cron_filepath = "#{node['magento']['docroot']}/cron.sh"
-
-file cron_filepath do
-  only_if do File.exists?(cron_filepath) end
-  mode "755"
-end
