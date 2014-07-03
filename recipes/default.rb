@@ -1,5 +1,4 @@
 include_recipe "php"
-include_recipe "n98-magerun"
 
 node['php']['magento']['package'].each do |pkg|
   package pkg do
