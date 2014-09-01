@@ -6,10 +6,6 @@ node['php']['magento']['package'].each do |pkg|
   end
 end
 
-package "php5-suhosin" do
-	action :purge
-end
-
 #We need git for deployments
 package "git-core" do
   action :install

@@ -16,3 +16,7 @@ if node['php']['install_apache2_module_config']
     notifies :restart, 'service[apache2]'
   end
 end
+
+package "php5-suhosin" do
+  action :purge
+end
