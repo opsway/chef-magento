@@ -1,6 +1,7 @@
 case node['platform']
 when "centos", "redhat", "fedora"
-	default['php']['magento']['package'] = []
+	default['php']['magento']['package'] = ["php-xmlrpc","php-mcrypt","php-gd","php-mysql","php-curl","php-pecl-memcache"]
+	override['php']['packages']      	 = ['php', 'php-cli', 'php-pear']
 when "debian", "ubuntu"
 	default['php']['magento']['package'] = ["php5-xmlrpc","php5-mcrypt","php5-mhash","php5-gd","php5-mysql","php5-curl","php5-memcache"]
 	override['php']['packages']      	 = ['php5', 'php5-cli', 'php-pear']
